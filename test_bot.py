@@ -10,6 +10,7 @@ from bot import (
     build_feed_url,
     build_line_messages,
     collect_topics,
+    is_social_profile_or_home_url,
     load_state,
     merge_topic,
     parse_feed,
@@ -68,6 +69,22 @@ class BotTests(unittest.TestCase):
         direct = make_topic(1, "https://x.com/example/status/1")
         merged = merge_topic(indirect, direct)
         self.assertEqual(merged.url, direct.url)
+
+    def test_social_profiles_are_rejected_but_posts_are_allowed(self):
+        self.assertTrue(is_social_profile_or_home_url("https://x.com/tiktok_japan"))
+        self.assertTrue(
+            is_social_profile_or_home_url("https://instagram.com/tiktok_japan/")
+        )
+        self.assertFalse(
+            is_social_profile_or_home_url(
+                "https://x.com/example/status/123456789"
+            )
+        )
+        self.assertFalse(
+            is_social_profile_or_home_url(
+                "https://www.threads.net/@example/post/ABC123"
+            )
+        )
 
     def test_line_messages_stay_inside_line_limits(self):
         topics = [make_topic(index) for index in range(1, 41)]

@@ -254,6 +254,37 @@ def matches_required_terms(topic: Topic, required_terms: list[str]) -> bool:
     return any(normalize(term) in haystack for term in required_terms)
 
 
+def matches_any_terms(topic: Topic, terms: list[str]) -> bool:
+    if not terms:
+        return True
+    haystack = normalize(f"{topic.title} {topic.summary}")
+    return any(normalize(term) in haystack for term in terms)
+
+
+def matches_blocked_terms(topic: Topic, terms: list[str]) -> bool:
+    if not terms:
+        return False
+    haystack = normalize(f"{topic.title} {topic.summary}")
+    return any(normalize(term) in haystack for term in terms)
+
+
+def is_social_profile_or_home_url(url: str) -> bool:
+    """Reject social profile/home links; notifications should point to posts."""
+    try:
+        parsed = urllib.parse.urlparse(url)
+    except ValueError:
+        return False
+    host = (parsed.hostname or "").casefold().removeprefix("www.")
+    path = parsed.path.casefold()
+    if host in {"x.com", "twitter.com"}:
+        return "/status/" not in path
+    if host == "instagram.com":
+        return not path.startswith(("/p/", "/reel/", "/tv/"))
+    if host == "threads.net":
+        return "/post/" not in path and not path.startswith("/t/")
+    return False
+
+
 def direct_link_quality(url: str) -> int:
     try:
         host = urllib.parse.urlparse(url).hostname or ""
@@ -312,6 +343,9 @@ def collect_topics(
     now = now or datetime.now(timezone.utc)
     lookback_hours = int(config.get("lookback_hours", 48))
     required_terms = list(config.get("required_terms", ["TikTok", "ティックトック"]))
+    interest_terms = list(config.get("required_interest_terms", []))
+    blocked_terms = list(config.get("blocked_terms", []))
+    min_score = int(config.get("min_score", 0))
     score_terms = {
         str(key): int(value)
         for key, value in config.get("score_terms", {}).items()
@@ -352,6 +386,12 @@ def collect_topics(
                 for topic in parsed:
                     if not matches_required_terms(topic, required_terms):
                         continue
+                    if not matches_any_terms(topic, interest_terms):
+                        continue
+                    if matches_blocked_terms(topic, blocked_terms):
+                        continue
+                    if is_social_profile_or_home_url(topic.url):
+                        continue
                     merged[topic.id] = merge_topic(merged.get(topic.id), topic)
             except Exception as error:  # Keep other sources running.
                 errors.append(f"{platform_name}/{provider_name}: {error}")
@@ -363,7 +403,7 @@ def collect_topics(
     for topic in merged.values():
         topic.score = score_topic(topic, score_terms, now)
     topics = sorted(
-        merged.values(),
+        (topic for topic in merged.values() if topic.score >= min_score),
         key=lambda item: (item.score, item.published_at or "", item.id),
         reverse=True,
     )

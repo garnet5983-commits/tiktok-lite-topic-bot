@@ -1,18 +1,60 @@
 {
   "keywords": [
-    "TikTok Lite",
-    "ティックトックライト",
-    "TikTok ポイ活",
-    "TikTok Lite 招待",
+    "TikTok Lite 増額",
+    "TikTok Lite 報酬 変更",
     "TikTok Lite キャンペーン",
-    "TikTok Lite 報酬",
-    "TikTok Lite ポイント",
+    "TikTok Lite ポイント 交換",
+    "TikTok Lite PayPay",
+    "TikTok Lite 招待 条件",
+    "TikTok Lite 新規 既存",
     "TikTok Lite 不具合",
-    "TikTok Lite 改悪"
+    "TikTok Lite ポイント つかない",
+    "TikTok Lite 改悪",
+    "TikTok Lite 終了",
+    "TikTok Lite 出金"
   ],
   "required_terms": [
     "TikTok",
     "ティックトック"
+  ],
+  "required_interest_terms": [
+    "増額",
+    "減額",
+    "変更",
+    "開始",
+    "終了",
+    "キャンペーン",
+    "招待",
+    "報酬",
+    "ポイント",
+    "PayPay",
+    "交換",
+    "換金",
+    "出金",
+    "引き出し",
+    "条件",
+    "対象",
+    "新規",
+    "既存",
+    "不具合",
+    "エラー",
+    "バグ",
+    "反映されない",
+    "貰えない",
+    "もらえない",
+    "凍結",
+    "BAN",
+    "規約",
+    "ミッション",
+    "チェックイン"
+  ],
+  "blocked_terms": [
+    "招待コード使って",
+    "紹介コード使って",
+    "コード使ってください",
+    "相互招待",
+    "登録お願いします",
+    "リンク踏んで"
   ],
   "platforms": [
     {
@@ -47,22 +89,36 @@
     {
       "name": "Googleニュース公開検索",
       "kind": "google_news_rss",
-      "enabled": true
+      "enabled": false
     }
   ],
   "score_terms": {
     "増額": 8,
+    "減額": 8,
+    "変更": 6,
     "キャンペーン": 7,
     "招待": 6,
     "報酬": 5,
     "ポイント": 4,
+    "交換": 5,
+    "換金": 6,
+    "出金": 6,
+    "条件": 5,
+    "対象": 4,
     "終了": 7,
     "改悪": 7,
     "不具合": 6,
     "バグ": 6,
-    "PayPay": 4
+    "PayPay": 4,
+    "凍結": 7,
+    "BAN": 7,
+    "招待コード": -12,
+    "紹介コード": -12,
+    "使ってください": -10,
+    "相互": -10
   },
-  "lookback_hours": 48,
-  "max_items_per_notification": 20,
+  "min_score": 15,
+  "lookback_hours": 24,
+  "max_items_per_notification": 8,
   "state_retention": 3000
 }
