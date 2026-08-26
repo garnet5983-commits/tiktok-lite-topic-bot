@@ -70,14 +70,14 @@
       "domains": [
         "threads.net"
       ],
-      "enabled": true
+      "enabled": false
     },
     {
       "name": "Instagram",
       "domains": [
         "instagram.com"
       ],
-      "enabled": true
+      "enabled": false
     }
   ],
   "search_providers": [
@@ -112,13 +112,18 @@
     "PayPay": 4,
     "凍結": 7,
     "BAN": 7,
+    "急増": 8,
+    "話題": 6,
+    "バズ": 6,
+    "万表示": 8,
     "招待コード": -12,
     "紹介コード": -12,
     "使ってください": -10,
     "相互": -10
   },
-  "min_score": 15,
+  "query_each_keyword": true,
+  "min_score": 20,
   "lookback_hours": 24,
-  "max_items_per_notification": 8,
+  "max_items_per_notification": 5,
   "state_retention": 3000
 }

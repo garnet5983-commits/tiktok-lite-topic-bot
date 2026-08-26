@@ -351,6 +351,8 @@ def collect_topics(
         for key, value in config.get("score_terms", {}).items()
     }
     merged: dict[str, Topic] = {}
+    search_hits: dict[str, int] = {}
+    best_ranks: dict[str, int] = {}
     errors: list[str] = []
     successful_requests = 0
 
@@ -367,34 +369,47 @@ def collect_topics(
 
     for platform in enabled_platforms:
         platform_name = str(platform["name"])
-        query = build_query(list(config["keywords"]), list(platform["domains"]))
-        for provider in enabled_providers:
-            provider_name = str(provider["name"])
-            try:
-                url = build_feed_url(
-                    str(provider["kind"]), query, lookback_hours
-                )
-                feed = fetch_url(url)
-                parsed = parse_feed(
-                    feed,
-                    platform=platform_name,
-                    search_provider=provider_name,
-                    lookback_hours=lookback_hours,
-                    now=now,
-                )
-                successful_requests += 1
-                for topic in parsed:
-                    if not matches_required_terms(topic, required_terms):
-                        continue
-                    if not matches_any_terms(topic, interest_terms):
-                        continue
-                    if matches_blocked_terms(topic, blocked_terms):
-                        continue
-                    if is_social_profile_or_home_url(topic.url):
-                        continue
-                    merged[topic.id] = merge_topic(merged.get(topic.id), topic)
-            except Exception as error:  # Keep other sources running.
-                errors.append(f"{platform_name}/{provider_name}: {error}")
+        keywords = list(config["keywords"])
+        query_groups = (
+            [[keyword] for keyword in keywords]
+            if config.get("query_each_keyword", False)
+            else [keywords]
+        )
+        for query_terms in query_groups:
+            query = build_query(query_terms, list(platform["domains"]))
+            for provider in enabled_providers:
+                provider_name = str(provider["name"])
+                try:
+                    url = build_feed_url(
+                        str(provider["kind"]), query, lookback_hours
+                    )
+                    feed = fetch_url(url)
+                    parsed = parse_feed(
+                        feed,
+                        platform=platform_name,
+                        search_provider=provider_name,
+                        lookback_hours=lookback_hours,
+                        now=now,
+                    )
+                    successful_requests += 1
+                    for rank, topic in enumerate(parsed, start=1):
+                        if not matches_required_terms(topic, required_terms):
+                            continue
+                        if not matches_any_terms(topic, interest_terms):
+                            continue
+                        if matches_blocked_terms(topic, blocked_terms):
+                            continue
+                        if is_social_profile_or_home_url(topic.url):
+                            continue
+                        search_hits[topic.id] = search_hits.get(topic.id, 0) + 1
+                        best_ranks[topic.id] = min(
+                            best_ranks.get(topic.id, rank), rank
+                        )
+                        merged[topic.id] = merge_topic(
+                            merged.get(topic.id), topic
+                        )
+                except Exception as error:  # Keep other sources running.
+                    errors.append(f"{platform_name}/{provider_name}: {error}")
 
     if enabled_platforms and enabled_providers and successful_requests == 0:
         details = " | ".join(errors[:3])
@@ -402,6 +417,9 @@ def collect_topics(
 
     for topic in merged.values():
         topic.score = score_topic(topic, score_terms, now)
+        repeat_bonus = min(24, max(0, search_hits.get(topic.id, 1) - 1) * 8)
+        rank_bonus = max(0, 11 - best_ranks.get(topic.id, 11))
+        topic.score += repeat_bonus + rank_bonus
     topics = sorted(
         (topic for topic in merged.values() if topic.score >= min_score),
         key=lambda item: (item.score, item.published_at or "", item.id),

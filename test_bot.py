@@ -141,6 +141,28 @@ class BotTests(unittest.TestCase):
         self.assertEqual(len(topics), 1)
         self.assertGreater(topics[0].score, 0)
 
+    @patch("bot.fetch_url", return_value=RSS_SAMPLE)
+    def test_query_each_keyword_runs_separate_searches(self, mocked_fetch):
+        config = {
+            "keywords": ["TikTok Lite 報酬", "TikTok Lite キャンペーン"],
+            "required_terms": ["TikTok"],
+            "platforms": [
+                {"name": "X", "domains": ["x.com"], "enabled": True}
+            ],
+            "search_providers": [
+                {"name": "search", "kind": "bing_web_rss", "enabled": True}
+            ],
+            "score_terms": {"キャンペーン": 5},
+            "query_each_keyword": True,
+            "lookback_hours": 48,
+        }
+        topics, errors = collect_topics(
+            config, now=datetime(2026, 8, 26, 4, 0, tzinfo=timezone.utc)
+        )
+        self.assertEqual(mocked_fetch.call_count, 2)
+        self.assertEqual(errors, [])
+        self.assertEqual(len(topics), 1)
+
     def test_line_rejects_too_long_message_before_network(self):
         with self.assertRaises(RuntimeError):
             send_line(["x" * 5001])
