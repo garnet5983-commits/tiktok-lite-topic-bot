@@ -1,5 +1,8 @@
 {
   "keywords": [
+    "TikTok Lite",
+    "ティックトックライト",
+    "TikTok ポイ活",
     "TikTok Lite 増額",
     "TikTok Lite 報酬 変更",
     "TikTok Lite キャンペーン",
@@ -122,8 +125,8 @@
     "相互": -10
   },
   "query_each_keyword": true,
-  "min_score": 20,
-  "lookback_hours": 24,
+  "min_score": 8,
+  "lookback_hours": 168,
   "max_items_per_notification": 5,
   "state_retention": 3000
 }
