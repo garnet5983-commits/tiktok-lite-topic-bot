@@ -1,0 +1,68 @@
+{
+  "keywords": [
+    "TikTok Lite",
+    "ティックトックライト",
+    "TikTok ポイ活",
+    "TikTok Lite 招待",
+    "TikTok Lite キャンペーン",
+    "TikTok Lite 報酬",
+    "TikTok Lite ポイント",
+    "TikTok Lite 不具合",
+    "TikTok Lite 改悪"
+  ],
+  "required_terms": [
+    "TikTok",
+    "ティックトック"
+  ],
+  "platforms": [
+    {
+      "name": "X",
+      "domains": [
+        "x.com",
+        "twitter.com"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "Threads",
+      "domains": [
+        "threads.net"
+      ],
+      "enabled": true
+    },
+    {
+      "name": "Instagram",
+      "domains": [
+        "instagram.com"
+      ],
+      "enabled": true
+    }
+  ],
+  "search_providers": [
+    {
+      "name": "Bing公開検索",
+      "kind": "bing_web_rss",
+      "enabled": true
+    },
+    {
+      "name": "Googleニュース公開検索",
+      "kind": "google_news_rss",
+      "enabled": true
+    }
+  ],
+  "score_terms": {
+    "増額": 8,
+    "キャンペーン": 7,
+    "招待": 6,
+    "報酬": 5,
+    "ポイント": 4,
+    "終了": 7,
+    "改悪": 7,
+    "不具合": 6,
+    "バグ": 6,
+    "PayPay": 4
+  },
+  "lookback_hours": 48,
+  "max_items_per_notification": 20,
+  "state_retention": 3000
+}
