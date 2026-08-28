@@ -1,9 +1,60 @@
 {
-  "checked_at": "2026-08-26T14:30:47.568034+00:00",
-  "items": [],
-  "line_notified": false,
+  "checked_at": "2026-08-28T01:47:05.556606+00:00",
+  "items": [
+    {
+      "id": "a7db289180c759cafdf691f9",
+      "platform": "X",
+      "published_at": null,
+      "score": 34,
+      "search_provider": "Bing公開検索",
+      "summary": "TikTok Liteとはどんなアプリかを初心者向けに解説。 通常版TikTokとの違い、ポイントの貯め方、交換方法、招待キャンペーン、安全性、口コミまでまとめました。",
+      "title": "TikTok Liteとは？通常版との違い・ポイントの貯め方・招待 ...",
+      "url": "https://www.kotablo.com/entry/tiktok-lite-summary"
+    },
+    {
+      "id": "edc19044b59785165b30103e",
+      "platform": "X",
+      "published_at": null,
+      "score": 21,
+      "search_provider": "Bing公開検索",
+      "summary": "「TikTok Lite」の日本公式アカウントです。 動画をおトクに楽しむ体験を、ぜひお試しください🎶. ポイント山分けキャンペーン.",
+      "title": "TikTok Lite Japan【公式】 (@tiktok_lite_japan) | TikTok",
+      "url": "https://www.tiktok.com/@tiktok_lite_japan"
+    },
+    {
+      "id": "d0693d84f939dffeb577a275",
+      "platform": "X",
+      "published_at": null,
+      "score": 21,
+      "search_provider": "Bing公開検索",
+      "summary": "好きな動画を見ながらポイント貯まる！ その他にもお得が満載のポイ活アプリ！ GoLIVE機能の提供を開始！ TikTok Liteは、TikTokの世界中の動画を楽しみながら、ギフトカードなどへの交換が可能なポイントを獲得できるアプリです。",
+      "title": "TikTok Lite 動画好き必見！動画×ポイントのポイ活 - Google Play",
+      "url": "https://play.google.com/store/apps/details?id=com.ss.android.ugc.tiktok.lite&hl=ja&gl=jp"
+    },
+    {
+      "id": "a8c2c5057f17c50b6fc24cc1",
+      "platform": "X",
+      "published_at": null,
+      "score": 19,
+      "search_provider": "Bing公開検索",
+      "summary": "TikTokライトとは？ TikTokライトとは、人気SNSアプリ「TikTok」の軽量版アプリです。 通常のTikTokよりもアプリ容量が小さく、スマートフォンの動作が軽いのが特徴です。",
+      "title": "【2026年最新】TikTokライトとは？稼ぎ方・ポイントの貯め方 ...",
+      "url": "https://note.com/money30life/n/nb2f991c7b5a2"
+    },
+    {
+      "id": "5aca290dde2a40793565688a",
+      "platform": "X",
+      "published_at": null,
+      "score": 12,
+      "search_provider": "Bing公開検索",
+      "summary": "TikTok Lite セクションに移動する TikTok Liteとは？ • TikTok Liteを始める • 報酬ハブとは？ • ポイントの使用方法 • TikTok Liteの使用時 T",
+      "title": "TikTok Help Center",
+      "url": "https://support.tiktok.com/ja/using-tiktok/exploring-videos/tiktok-lite-app"
+    }
+  ],
+  "line_notified": true,
   "mode": "free_public_search",
-  "new_found": 0,
+  "new_found": 5,
   "partial_errors": [],
-  "total_found": 0
+  "total_found": 5
 }
