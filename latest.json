@@ -1,20 +1,9 @@
 {
-  "checked_at": "2026-08-28T21:56:38.099614+00:00",
-  "items": [
-    {
-      "id": "4a690cbf2f1a74276b0130ad",
-      "platform": "X",
-      "published_at": null,
-      "score": 36,
-      "search_provider": "Bing公開検索",
-      "summary": "While TikTok remains accessible to users in most countries, a minority of countries (including India and Afghanistan) have implemented full or partial bans. Many other countries limit TikTok's use on government-issued devices for security or privacy reasons. [9][13]",
-      "title": "TikTok - Wikipedia",
-      "url": "https://en.wikipedia.org/wiki/TikTok"
-    }
-  ],
-  "line_notified": true,
+  "checked_at": "2026-08-29T00:22:10.943851+00:00",
+  "items": [],
+  "line_notified": false,
   "mode": "free_public_search",
-  "new_found": 1,
+  "new_found": 0,
   "partial_errors": [],
-  "total_found": 1
+  "total_found": 0
 }
