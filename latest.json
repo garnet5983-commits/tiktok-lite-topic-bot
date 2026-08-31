@@ -1,9 +1,60 @@
 {
-  "checked_at": "2026-08-31T00:22:11.657381+00:00",
-  "items": [],
-  "line_notified": false,
+  "checked_at": "2026-08-31T06:22:32.596676+00:00",
+  "items": [
+    {
+      "id": "d0693d84f939dffeb577a275",
+      "platform": "X",
+      "published_at": null,
+      "score": 22,
+      "search_provider": "Bing公開検索",
+      "summary": "TikTok Liteは、TikTokの世界中の動画を楽しみながら、ギフトカードなどへの交換が可能なポイントを獲得できるアプリです。 ポイントは「動画視聴」や「動画へのいいね」などのタスクをクリアすると獲得でき、さまざまなタスクをクリアしながらTikTokの動画をお楽しみいただけます。 TikTok...",
+      "title": "TikTok Lite 動画好き必見！動画×ポイントのポイ活 - Google Play",
+      "url": "https://play.google.com/store/apps/details?id=com.ss.android.ugc.tiktok.lite&hl=ja&gl=jp"
+    },
+    {
+      "id": "6960988e9651ae47906fbf69",
+      "platform": "X",
+      "published_at": null,
+      "score": 22,
+      "search_provider": "Bing公開検索",
+      "summary": "TikTok (ティックトック) の TikTok Lite Japan【公式】 (@tiktok_lite_japan) |. 206.4K件の「いいね」。 フォロワー108.7K人。 好きな動画を見るとポイントが貯まる！ 「TikTok Lite」の日本公式アカウントです。 動画をおトクに楽しむ体験を、ぜひお試しください🎶. ポイント山分けキャンペーン.",
+      "title": "tiktok_lite_japan",
+      "url": "https://www.tiktok.com/@tiktok_lite_japan"
+    },
+    {
+      "id": "a8c2c5057f17c50b6fc24cc1",
+      "platform": "X",
+      "published_at": null,
+      "score": 16,
+      "search_provider": "Bing公開検索",
+      "summary": "TikTokライトとは？ TikTokライトとは、人気SNSアプリ「TikTok」の軽量版アプリです。 通常のTikTokよりもアプリ容量が小さく、スマートフォンの動作が軽いのが特徴です。",
+      "title": "【2026年最新】TikTokライトとは？稼ぎ方・ポイントの貯め方 ...",
+      "url": "https://note.com/money30life/n/nb2f991c7b5a2"
+    },
+    {
+      "id": "d01b18b7b9a45fbadaa9db9d",
+      "platform": "X",
+      "published_at": null,
+      "score": 11,
+      "search_provider": "Bing公開検索",
+      "summary": "TikTok Liteとは、タスクを完了し、クリエイターと交流し、コンテンツにリアクションすることで、ポイントを集めるためのアプリです。 以下のアクティビティで、ポイントがたまります。 • 新しいコンテンツを見る • コンテンツに「いいね」する",
+      "title": "TikTok Lite",
+      "url": "https://support.tiktok.com/ja/using-tiktok/exploring-videos/tiktok-lite-app"
+    },
+    {
+      "id": "b78a3ce50cc68e7d2905a7b4",
+      "platform": "X",
+      "published_at": null,
+      "score": 11,
+      "search_provider": "Bing公開検索",
+      "summary": "1.TikTokとTikTok Liteの違い【結論】 まずは結論から解説します。 つまり…!! TikTok Liteは「動画を見る＋ポイントを貯める」ことに特化したアプリ です。 SNSとして動画投稿や編集を楽しみたい人は通常のTikTokの方が向いています。 一方で…",
+      "title": "TikTokとTikTok Liteの違い｜ポイント・容量・機能をわかりやすく ...",
+      "url": "https://note.com/money30life/n/n7e917d472b2f"
+    }
+  ],
+  "line_notified": true,
   "mode": "free_public_search",
-  "new_found": 0,
+  "new_found": 1,
   "partial_errors": [],
-  "total_found": 0
+  "total_found": 5
 }
