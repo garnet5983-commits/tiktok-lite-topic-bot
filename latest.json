@@ -1,20 +1,9 @@
 {
-  "checked_at": "2026-08-30T18:22:05.192508+00:00",
-  "items": [
-    {
-      "id": "6ed37ccd0f1e20e041469a4e",
-      "platform": "X",
-      "published_at": null,
-      "score": 36,
-      "search_provider": "Bing公開検索",
-      "summary": "TikTok Shopで衣類、美容、電子機器などのお得な特典を見つけましょう。 対象商品は送料無料でご利用いただけます。 今すぐ購入して、限定オファーをアンロックしましょう！",
-      "title": "TikTok Shop：衣類、美容などの商品が送料無料",
-      "url": "https://shop.tiktok.com/jp"
-    }
-  ],
-  "line_notified": true,
+  "checked_at": "2026-08-31T00:22:11.657381+00:00",
+  "items": [],
+  "line_notified": false,
   "mode": "free_public_search",
-  "new_found": 1,
+  "new_found": 0,
   "partial_errors": [],
-  "total_found": 1
+  "total_found": 0
 }
