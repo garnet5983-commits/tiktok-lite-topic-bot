@@ -1,9 +1,60 @@
 {
-  "checked_at": "2026-09-05T12:30:27.905750+00:00",
-  "items": [],
-  "line_notified": false,
+  "checked_at": "2026-09-05T18:27:56.423372+00:00",
+  "items": [
+    {
+      "id": "d0693d84f939dffeb577a275",
+      "platform": "X",
+      "published_at": null,
+      "score": 17,
+      "search_provider": "Bing公開検索",
+      "summary": "好きな動画を見ながらポイント貯まる！その他にもお得が満載のポイ活アプリ！",
+      "title": "TikTok Lite 動画好き必見！動画×ポイントのポイ活 - Google Play",
+      "url": "https://play.google.com/store/apps/details?id=com.ss.android.ugc.tiktok.lite&hl=ja&gl=jp"
+    },
+    {
+      "id": "c84e6a854a4e8d30d1cd89a2",
+      "platform": "X",
+      "published_at": null,
+      "score": 17,
+      "search_provider": "Bing公開検索",
+      "summary": "つまり、「スマホが古くてTikTokが重い」「データ通信量を節約したい」という人向けに作られたアプリです。 日本では特に「ポイ活ができるアプリ」として話題になった時期がありましたが、2026年以降はそのポイント報酬機能に大きな変化が起きています。 詳しくは後述します。 まず基本的な違いを整理しておきましょう。 通常のTikTokより軽量で、古いスマートフォンでも起動しやすい設計です。 動画の閲覧やコメント機能は使えますが、通常のTikTokに比べると一部の機能が制限されています。 たとえば動画の投稿や編集機能は通常版のほうが充実しています。",
+      "title": "【2026年最新版】TikTok Liteとは？TikTokとの違い・危険性 ...",
+      "url": "https://note.com/az_aka/n/n0319dd98498e"
+    },
+    {
+      "id": "a8c2c5057f17c50b6fc24cc1",
+      "platform": "X",
+      "published_at": null,
+      "score": 17,
+      "search_provider": "Bing公開検索",
+      "summary": "TikTokライトとは？ TikTokライトとは、人気SNSアプリ「TikTok」の軽量版アプリです。 通常のTikTokよりもアプリ容量が小さく、スマートフォンの動作が軽いのが特徴です。 さらに、TikTok Liteにはポイントを貯められる機能があり、動画を視聴したり ...",
+      "title": "【2026年最新】TikTokライトとは？稼ぎ方・ポイントの貯め方 ...",
+      "url": "https://note.com/money30life/n/nb2f991c7b5a2"
+    },
+    {
+      "id": "6960988e9651ae47906fbf69",
+      "platform": "X",
+      "published_at": null,
+      "score": 15,
+      "search_provider": "Bing公開検索",
+      "summary": "TikTok (ティックトック) の TikTok Lite Japan【公式】 (@tiktok_lite_japan) |206.4K件の「いいね」。 フォロワー109.4K人。 好きな動画を見るとポイントが貯まる！ 「TikTok Lite」の日本公式アカウントです。",
+      "title": "tiktok_lite_japan",
+      "url": "https://www.tiktok.com/@tiktok_lite_japan"
+    },
+    {
+      "id": "5aca290dde2a40793565688a",
+      "platform": "X",
+      "published_at": null,
+      "score": 15,
+      "search_provider": "Bing公開検索",
+      "summary": "• TikTok Liteを始める • 報酬ハブとは？ • ポイントの使用方法 • TikTok Liteの使用時間制限モード TikTok Liteとは？ TikTok Liteとは、タスクを完了し、クリエイターと交流し、コンテンツにリアクションすることで、ポイントを集めるためのアプリです。",
+      "title": "TikTok Help Center",
+      "url": "https://support.tiktok.com/ja/using-tiktok/exploring-videos/tiktok-lite-app"
+    }
+  ],
+  "line_notified": true,
   "mode": "free_public_search",
-  "new_found": 0,
+  "new_found": 1,
   "partial_errors": [],
-  "total_found": 0
+  "total_found": 5
 }
