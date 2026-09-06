@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-06T00:39:10.735467+00:00",
+  "checked_at": "2026-09-06T06:31:28.501790+00:00",
   "items": [
     {
       "id": "40d2048e71eec6b478e874c9",
@@ -162,9 +162,9 @@
       "url": "https://gokuraku.io/library/TikTokLite-earn/"
     }
   ],
-  "line_notified": true,
+  "line_notified": false,
   "mode": "free_public_search",
-  "new_found": 13,
+  "new_found": 0,
   "partial_errors": [],
   "total_found": 16
 }
